@@ -1,0 +1,197 @@
+/* --- General Setup --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #e9eef2; /* Lighter, softer background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Main Product Card Container --- */
+.product-card {
+    width: 100%;
+    max-width: 380px;
+    background-color: #ffffff;
+    border-radius: 30px; /* Softer radius */
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.8s ease-in-out; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Product Image and Header --- */
+.product-header {
+    position: relative;
+    overflow: hidden; /* Important for image zoom effect */
+}
+
+.product-header img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    filter: sepia(0.2) contrast(0.9);
+    transition: transform 0.4s ease; /* Smooth zoom transition */
+}
+
+.product-card:hover .product-header img {
+    transform: scale(1.05); /* Zoom image on card hover */
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Cover just the top part */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent);
+    z-index: 1;
+}
+
+/* --- Header Navigation Icons --- */
+.header-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2; /* Place icons above overlay */
+}
+
+.icon-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.menu-btn span {
+    transform: rotate(90deg);
+}
+
+/* --- Product Details Section --- */
+.product-details {
+    background-color: #ffffff;
+    padding: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* --- Typography --- */
+.product-details h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #888888;
+    margin-bottom: 25px;
+}
+
+.description h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 15px;
+    line-height: 1.7; /* Increased line-height for readability */
+    color: #555555;
+}
+
+.description a {
+    color: #007bff;
+    text-decoration: none;
+    background-image: linear-gradient(to top, #cce5ff 50%, transparent 50%);
+    background-size: 100% 200%;
+    background-position: 0 0;
+    transition: background-position 0.4s ease;
+}
+
+.description a:hover {
+    background-position: 0 100%;
+    color: #0056b3;
+}
+
+/* --- Checkout Footer --- */
+.product-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.checkout-btn {
+    background: linear-gradient(45deg, #6A9955, #85b86b);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 35px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(106, 153, 85, 0.4);
+    transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(106, 153, 85, 0.5);
+}

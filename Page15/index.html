@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenGenie Checkout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .main-container {
+            max-width: 420px;
+            margin: auto;
+            background-color: #f8fafc;
+        }
+        .active-payment {
+            background-color: #16a34a;
+            color: white;
+            box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
+        }
+        .inactive-payment {
+            background-color: #e5e7eb;
+            color: #374151;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <!-- Main container for the mobile view -->
+    <div class="main-container w-full h-screen sm:h-auto sm:max-h-[850px] sm:rounded-3xl shadow-lg bg-white flex flex-col">
+
+        <!-- Header Section -->
+        <header class="flex items-center justify-between p-4 sticky top-0 bg-white z-10">
+            <!-- Back Arrow -->
+            <button aria-label="Go back" class="text-2xl text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <!-- Brand Logo (replaced with your attached logo) -->
+            <div class="flex items-center">
+                <img
+                    src="Logo.png"
+                    alt="GreenGenie logo"
+                    class="h-7 md:h-8 w-auto select-none"
+                    draggable="false"
+                />
+            </div>
+
+            <!-- Notification Bell -->
+            <button aria-label="Notifications" class="text-2xl text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow p-4 overflow-y-auto">
+            <h1 class="text-2xl font-bold text-gray-800 mb-4">Checkout details</h1>
+
+            <!-- Payment Summary -->
+            <div class="bg-white border-2 border-green-500 rounded-2xl p-6 mb-6 shadow-sm">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-500 text-lg">For payment:</span>
+                    <div>
+                        <p class="text-3xl font-bold text-gray-800">$72.60</p>
+                        <p class="text-sm text-gray-400 text-right">Including VAT (21%)</p>
+                    </div>
+                </div>
+
+                <!-- Payment Method Toggle -->
+                <div class="mt-6 bg-gray-200 rounded-full p-1 flex">
+                    <button id="creditCardBtn" class="w-1/2 py-3 rounded-full text-center font-semibold transition-all duration-300 ease-in-out flex items-center justify-center space-x-2 active-payment">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>Credit card</span>
+                    </button>
+                    <button id="applePayBtn" class="w-1/2 py-3 rounded-full text-center font-semibold transition-all duration-300 ease-in-out flex items-center justify-center space-x-2 inactive-payment">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>Apple Pay</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Credit Card Form -->
+            <div id="creditCardForm" class="space-y-4">
+                <div>
+                    <label for="cardNumber" class="block text-sm font-medium text-gray-700 mb-1">Card number</label>
+                    <div class="relative">
+                        <input type="text" id="cardNumber" placeholder="0000  0000  0000  0000" class="w-full p-4 bg-gray-100 rounded-xl border-none focus:ring-2 focus:ring-green-500">
+                        <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-gray-400">
+                            <i class="fa-solid fa-paste"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="cardholderName" class="block text-sm font-medium text-gray-700 mb-1">Cardholder name</label>
+                    <input type="text" id="cardholderName" placeholder="ex. David Kim" class="w-full p-4 bg-gray-100 rounded-xl border-none focus:ring-2 focus:ring-green-500">
+                </div>
+
+                <div class="flex space-x-4">
+                    <div class="w-1/2">
+                        <label for="expiryDate" class="block text-sm font-medium text-gray-700 mb-1">Expiry date</label>
+                        <input type="text" id="expiryDate" placeholder="MM / YYYY" class="w-full p-4 bg-gray-100 rounded-xl border-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div class="w-1/2">
+                        <label for="cvv" class="block text-sm font-medium text-gray-700 mb-1">
+                            CVV / CVC
+                            <span class="text-gray-400 cursor-pointer">
+                                <i class="fa-solid fa-circle-question ml-1"></i>
+                            </span>
+                        </label>
+                        <input type="text" id="cvv" placeholder="3-4 digits" class="w-full p-4 bg-gray-100 rounded-xl border-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apple Pay Info -->
+            <div id="applePayInfo" class="hidden text-center p-8 bg-gray-100 rounded-2xl">
+                <p class="text-gray-600">Proceed with Apple Pay to complete your purchase securely.</p>
+            </div>
+        </main>
+
+        <!-- Pay Button -->
+        <div class="p-4 bg-white sticky bottom-0">
+            <button class="w-full bg-green-300 text-green-800 font-bold py-4 rounded-2xl text-lg flex items-center justify-center space-x-3 hover:bg-green-400 transition-colors duration-300">
+                <i class="fa-solid fa-lock"></i>
+                <span>Pay for the order</span>
+            </button>
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="flex justify-around p-4 bg-white border-t border-gray-200 sticky bottom-0">
+            <a href="#" class="text-gray-500 hover:text-green-600">
+                <i class="fa-solid fa-house text-2xl"></i>
+            </a>
+            <a href="#" class="text-green-600 font-bold">
+                <i class="fa-solid fa-seedling text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-green-600">
+                <i class="fa-solid fa-crown text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-green-600">
+                <i class="fa-solid fa-store text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-green-600">
+                <i class="fa-solid fa-leaf text-2xl"></i>
+            </a>
+        </nav>
+
+    </div>
+
+    <script>
+        // Toggle payment methods
+        const creditCardBtn = document.getElementById('creditCardBtn');
+        const applePayBtn = document.getElementById('applePayBtn');
+        const creditCardForm = document.getElementById('creditCardForm');
+        const applePayInfo = document.getElementById('applePayInfo');
+
+        creditCardBtn.addEventListener('click', () => {
+            creditCardBtn.classList.remove('inactive-payment');
+            creditCardBtn.classList.add('active-payment');
+            applePayBtn.classList.remove('active-payment');
+            applePayBtn.classList.add('inactive-payment');
+            creditCardForm.style.display = 'block';
+            applePayInfo.style.display = 'none';
+        });
+
+        applePayBtn.addEventListener('click', () => {
+            applePayBtn.classList.remove('inactive-payment');
+            applePayBtn.classList.add('active-payment');
+            creditCardBtn.classList.remove('active-payment');
+            creditCardBtn.classList.add('inactive-payment');
+            creditCardForm.style.display = 'none';
+            applePayInfo.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
+   

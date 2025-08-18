@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GreenGenie Mobile</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="mobile-frame">
+
+    <!-- Landing Page -->
+    <section class="page landing" id="landing">
+      <div class="content">
+        <h1>GreenGenie</h1>
+        <p>Your personal smart garden assistant</p>
+        <button class="primary-btn" onclick="goTo('login')">Get Started</button>
+      </div>
+    </section>
+
+    <!-- Login Page -->
+    <section class="page login" id="login">
+      <div class="content">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button class="primary-btn" onclick="goTo('welcome')">Login</button>
+        <div class="login-links">
+          <a href="#">Forgot Password?</a>
+          <span>|</span>
+          <a href="#" onclick="goTo('signup')">Sign Up</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome Page -->
+    <section class="page welcome" id="welcome">
+      <div class="content">
+        <h1 class="welcome-title">WELCOME</h1>
+        <p>Let’s grow something beautiful today.</p>
+        <input type="tel" placeholder="Enter Your Phone No." />
+        <button class="primary-btn" onclick="goTo('items')">Send OTP</button>
+        <button class="secondary-btn" onclick="goTo('landing')">Back to Home</button>
+      </div>
+    </section>
+
+    <!-- Signup Page -->
+    <section class="page signup" id="signup">
+      <div class="content scroll">
+        <h2 class="brand-name">Green<span>Genie</span></h2>
+
+        <input type="email" placeholder="Enter E-mail">
+        <input type="password" placeholder="Enter Password">
+        <input type="password" placeholder="Confirm Password">
+
+        <label class="checkbox-label">
+          <input type="checkbox"> I agree to the <a href="#">terms &amp; conditions</a> and <a href="#">privacy policy</a>.
+        </label>
+
+        <button class="primary-btn" onclick="goTo('items')">Sign Up</button>
+
+        <p class="or">or sign up with</p>
+        <div class="social-buttons">
+          <button class="social-btn google">Google</button>
+          <button class="social-btn facebook">Facebook</button>
+        </div>
+
+        <p class="login-link">Already have an account? <a href="#" onclick="goTo('login')">Login</a></p>
+      </div>
+    </section>
+
+    <!-- Items Page -->
+    <section class="page items" id="items">
+      <div class="content scroll">
+        <div class="header">
+          <span class="back-btn" onclick="goTo('welcome')">❮</span>
+          <h2>What are you looking for?</h2>
+          <div class="icons">
+            <span class="icon">🛒</span>
+            <span class="icon">☰</span>
+          </div>
+        </div>
+
+        <div class="categories">
+          <div class="item" onclick="goTo('plantsPage')"><img src="images/plants.jpg" alt="Plants"><p>Plants</p></div>
+          <div class="item" onclick="goTo('fertilizersPage')"><img src="images/fertilizers.jpg" alt="Fertilizers"><p>Fertilizers</p></div>
+          <div class="item" onclick="goTo('toolsPage')"><img src="images/tools.jpg" alt="Gardening Tools"><p>Tools</p></div>
+          <div class="item" onclick="goTo('seedsPage')"><img src="images/seeds.jpg" alt="Seeds"><p>Seeds</p></div>
+          <div class="item" onclick="goTo('potsPage')"><img src="images/pots.jpg" alt="Pots/Grow Bags"><p>Pots/Grow Bags</p></div>
+          <div class="item" onclick="goTo('soilPage')"><img src="images/more-seeds.jpg" alt="Soil"><p>Soil</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Sub Pages -->
+    <section class="page" id="plantsPage">
+      <div class="content scroll">
+        <span class="back-btn" onclick="goTo('items')">❮</span>
+        <h2>Plants</h2>
+        <ul class="sub-list">
+          <li>Rose Plant</li><li>Money Plant</li><li>Jade Plant</li><li>Bamboo Plant</li>
+          <li>Snake Plant</li><li>Peace Lily</li><li>Aloe Vera</li><li>Spider Plant</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page" id="fertilizersPage">
+      <div class="content scroll">
+        <span class="back-btn" onclick="goTo('items')">❮</span>
+        <h2>Fertilizers</h2>
+        <ul class="sub-list">
+          <li>Organic Compost</li><li>Vermicompost</li><li>Seaweed Extract</li><li>NPK Mix</li>
+          <li>Bone Meal</li><li>Neem Cake</li><li>Liquid Fertilizer</li><li>Cow Dung Cake</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page" id="toolsPage">
+      <div class="content scroll">
+        <span class="back-btn" onclick="goTo('items')">❮</span>
+        <h2>Gardening Tools</h2>
+        <ul class="sub-list">
+          <li>Hand Trowel</li><li>Pruner</li><li>Weeder</li><li>Rake</li>
+          <li>Spray Bottle</li><li>Gloves</li><li>Watering Can</li><li>Garden Fork</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page" id="seedsPage">
+      <div class="content scroll">
+        <span class="back-btn" onclick="goTo('items')">❮</span>
+        <h2>Seeds</h2>
+        <ul class="sub-list">
+          <li>Tomato</li><li>Chili</li><li>Spinach</li><li>Carrot</li>
+          <li>Mint</li><li>Basil</li><li>Okra</li><li>Coriander</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page" id="potsPage">
+      <div class="content scroll">
+        <span class="back-btn" onclick="goTo('items')">❮</span>
+        <h2>Pots/Grow Bags</h2>
+        <ul class="sub-list">
+          <li>Ceramic Pot</li><li>Plastic Pot</li><li>Terracotta Pot</li><li>Grow Bag</li>
+          <li>Self-watering Pot</li><li>Wall Hanging Pot</li><li>Metal Pot</li><li>Concrete Pot</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page" id="soilPage">
+      <div class="content scroll">
+        <span class="back-btn" onclick="goTo('items')">❮</span>
+        <h2>Soil</h2>
+        <ul class="sub-list">
+          <li>Potting Mix</li><li>Red Soil</li><li>Black Soil</li><li>Loamy Soil</li>
+          <li>Cocopeat</li><li>Sandy Soil</li><li>Clay Soil</li><li>Soil Conditioner</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    function goTo(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('visible'));
+      document.getElementById(pageId).classList.add('visible');
+    }
+    goTo('landing');
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

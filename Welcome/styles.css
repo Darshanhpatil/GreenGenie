@@ -1,0 +1,288 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #e0e0e0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Mobile Frame */
+.mobile-frame {
+  width: 390px;
+  height: 844px;
+  border: 8px solid #000;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  position: relative;
+}
+
+/* Page Base */
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  overflow-y: auto;
+}
+.page.visible {
+  display: flex;
+  opacity: 1;
+}
+
+/* Content Box */
+.content {
+  width: 100%;
+  max-width: 340px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Backgrounds */
+.landing {
+  background-image: url('images/leading.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.login {
+  background-image: url('images/login.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.welcome {
+  background-image: url('images/welcome.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+   .content {
+      background: rgba(0, 0, 0, 0.762);
+      color: #fff;
+    }
+   .signup {
+      background: url('images/sign in.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    .items {
+      background: url('images/item.jpg') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+    }
+    .item p {
+      color: #fff;
+    }
+
+/* Typography */
+h1, h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button:active {
+  transform: scale(0.98);
+}
+/* Primary Button */
+.primary-btn {
+  background: linear-gradient(45deg, #4CAF50, #66BB6A);
+  color: #fff;
+}
+.primary-btn:hover {
+  background: linear-gradient(45deg, #43A047, #4CAF50);
+}
+/* Secondary Button */
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+}
+.secondary-btn:hover {
+  background: #4CAF50;
+  color: #fff;
+}
+
+/* Login Links */
+.login-links, .login-link {
+  font-size: 14px;
+  margin-top: 12px;
+}
+.login-links a,
+.login-link a,
+.checkbox-label a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.login-links span {
+  color: #fff;
+}
+
+/* Welcome Page Title */
+.welcome-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Signup Page Specifics */
+.top-image {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 10px;
+}
+.brand-name {
+  font-size: 24px;
+  margin: 10px 0 20px;
+  color: #2e7d32;
+  font-weight: 600;
+}
+.brand-name span {
+  color: #66bb6a;
+}
+.checkbox-label {
+  font-size: 13px;
+  text-align: left;
+  margin: 10px 0;
+}
+
+/* Social Login */
+.or {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #888;
+}
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.social-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+}
+.google {
+  background-color: #db4437;
+}
+.facebook {
+  background-color: #4267B2;
+}
+
+/* Items Page (Categories) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.back-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: #4CAF50;
+}
+.header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+.icons {
+  display: flex;
+  gap: 10px;
+}
+.icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: #4CAF50;
+}
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+.item {
+  background-color: #f3f3f39f;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.059);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.item img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+.item p {
+  padding: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+
