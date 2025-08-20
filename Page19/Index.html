@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #f0fdf4, #d1fae5);
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen px-4">
+
+  <!-- Mobile Container -->
+  <div class="w-full max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200">
+    
+    <!-- Status Bar -->
+    <div class="flex justify-between items-center px-4 py-2 bg-gray-100">
+      <span class="text-sm font-bold text-gray-800">9:41</span>
+      <div class="flex items-center space-x-1 text-gray-700">
+        <i class="fa-solid fa-signal"></i>
+        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-solid fa-battery-full"></i>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 flex items-center justify-between px-4 py-3 bg-white border-b">
+      <button class="p-2 rounded-full hover:bg-green-100 transition">
+        <i class="fa-solid fa-arrow-left text-green-700"></i>
+      </button>
+      <h1 class="text-xl font-bold text-green-700">Notifications</h1>
+      <button class="p-2 rounded-full hover:bg-green-100 transition">
+        <i class="fa-solid fa-ellipsis-vertical text-gray-600"></i>
+      </button>
+    </header>
+
+    <!-- Notifications -->
+    <main class="p-4 space-y-4 max-h-[600px] overflow-y-auto">
+      
+      <!-- Notification Item 1 -->
+      <div class="flex items-center space-x-4 p-3 rounded-xl bg-green-50 hover:bg-green-100 transition shadow-sm">
+        <img class="w-12 h-12 rounded-full object-cover" src="Hanmant.jpg" alt="Hanmant Rote">
+        <div class="flex-1">
+          <p class="text-sm text-gray-800"><span class="font-bold">Hanmant Rote</span> has rescheduled Booking Id# 13234523.</p>
+          <span class="text-xs text-gray-500">Just now</span>
+        </div>
+      </div>
+
+      <!-- Notification Item 2 -->
+      <div class="flex items-center space-x-4 p-3 rounded-xl bg-white shadow hover:shadow-md transition">
+        <img class="w-12 h-12 rounded-full object-cover" src="Sanjog.jpg" alt="Sanjog Shirodkar">
+        <div class="flex-1">
+          <p class="text-sm text-gray-800"><span class="font-bold">Sanjog Shirodkar</span> mentioned you in a comment.</p>
+          <span class="text-xs text-gray-500">5 min ago</span>
+        </div>
+      </div>
+
+      <!-- Notification Item 3 -->
+      <div class="flex items-center space-x-4 p-3 rounded-xl bg-white shadow hover:shadow-md transition">
+        <img class="w-12 h-12 rounded-full object-cover" src="Rohan.jpg" alt="Rohan Takale">
+        <div class="flex-1">
+          <p class="text-sm text-gray-800"><span class="font-bold">Rohan Takale</span> completed the task "Water the plants".</p>
+          <span class="text-xs text-gray-500">20 min ago</span>
+        </div>
+      </div>
+
+      <!-- Notification Item 4 -->
+      <div class="flex items-center space-x-4 p-3 rounded-xl bg-white shadow hover:shadow-md transition">
+        <img class="w-12 h-12 rounded-full object-cover" src="Pranay.jpg" alt="Pranay Gatkine">
+        <div class="flex-1">
+          <p class="text-sm text-gray-800"><span class="font-bold">Pranay Gatkine</span> sent you a new message.</p>
+          <span class="text-xs text-gray-500">1 hr ago</span>
+        </div>
+      </div>
+
+      <!-- Notification Item 5 -->
+      <div class="flex items-center space-x-4 p-3 rounded-xl bg-white shadow hover:shadow-md transition">
+        <img class="w-12 h-12 rounded-full object-cover" src="Vaibhav.jpg" alt="Vaibhav Paikroa">
+        <div class="flex-1">
+          <p class="text-sm text-gray-800"><span class="font-bold">Vaibhav Paikroa</span>'s booking is confirmed for tomorrow.</p>
+          <span class="text-xs text-gray-500">9 hr ago</span>
+        </div>
+      </div>
+
+      <!-- Notification Item 6 -->
+      <div class="flex items-center space-x-4 p-3 rounded-xl bg-white shadow hover:shadow-md transition">
+        <img class="w-12 h-12 rounded-full object-cover" src="Vikas.jpg" alt="Vikas Shalke">
+        <div class="flex-1">
+          <p class="text-sm text-gray-800"><span class="font-bold">Vikas Shalke</span> uploaded a new photo to the gallery.</p>
+          <span class="text-xs text-gray-500">Tue, 5:10 pm</span>
+        </div>
+      </div>
+
+      <!-- Notification Item 7 -->
+      <div class="flex items-center space-x-4 p-3 rounded-xl bg-white shadow hover:shadow-md transition">
+        <img class="w-12 h-12 rounded-full object-cover" src="Darshan.jpg" alt="Darshan Patil">
+        <div class="flex-1">
+          <p class="text-sm text-gray-800"><span class="font-bold">Darshan Patil</span> left a review on your service.</p>
+          <span class="text-xs text-gray-500">Wed, 3:30 pm</span>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
+
