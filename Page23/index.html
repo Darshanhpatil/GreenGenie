@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Bookings</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom green color to match the screenshot */
+        .custom-green {
+            color: #65B741;
+        }
+        .custom-green-bg {
+            background-color: #65B741;
+        }
+        .custom-green-border {
+            border-color: #65B741;
+        }
+        .custom-light-green-bg {
+            background-color: #E8F5E9;
+        }
+    </style>
+</head>
+<body class="bg-gray-300 flex items-center justify-center min-h-screen">
+
+    <!-- Mobile App Container -->
+    <div class="w-full max-w-sm mx-auto bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+        
+        <!-- Status Bar -->
+        <div class="px-6 pt-4 pb-2 flex justify-between items-center text-white">
+            <span class="text-sm font-semibold">9:41</span>
+            <div class="flex items-center space-x-1">
+                <!-- Network Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reception-4" viewBox="0 0 16 16">
+                  <path d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm4 2a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm4 0a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5zm4 0a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5z"/>
+                </svg>
+                <!-- Battery Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-battery-full" viewBox="0 0 16 16">
+                  <path d="M2 6h10v4H2z"/>
+                  <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1 0 3V7a1.5 1.5 0 0 1 0 3"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="p-6 bg-gray-50 rounded-t-2xl">
+            <!-- Header Section -->
+            <header class="flex items-center mb-6">
+                <!-- Back Button -->
+                <button class="p-2 rounded-md custom-green-bg text-white hover:opacity-90 transition-opacity duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <!-- Title -->
+                <h1 class="text-xl font-bold custom-green ml-4">Upcoming Bookings</h1>
+            </header>
+
+            <!-- Bookings List -->
+            <div class="space-y-4">
+
+                <!-- Booking Card 1 -->
+                <div class="bg-white rounded-xl p-3 border-2 custom-green-border">
+                    <div class="flex items-start justify-between mb-2">
+                        <div>
+                            <p class="text-md font-semibold text-gray-900">Saif Ahmed</p>
+                            <div class="flex items-center text-sm text-gray-500 mt-1">
+                                <span class="h-2 w-2 bg-red-400 rounded-full mr-2"></span>
+                                Fruitful Service
+                            </div>
+                        </div>
+                        <!-- More Options Button -->
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Date and Time -->
+                    <div class="mb-3">
+                        <span class="inline-block custom-light-green-bg custom-green text-xs font-medium px-3 py-1 rounded">Mon, Oct 15 - 08:00 PM</span>
+                    </div>
+                    <!-- Map Image with Duration -->
+                    <div class="relative">
+                        <img src="https://placehold.co/400x200/e0e0e0/a0a0a0?text=Map+View" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x200/e2e8f0/4a5568?text=Map+Error';"
+                             alt="Map showing location for Saif Ahmed's booking" class="rounded-lg w-full h-32 object-cover">
+                        <div class="absolute bottom-2 right-2 custom-green-bg text-white text-xs font-semibold px-2 py-1 rounded shadow-md">
+                            02:00:00
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Card 2 -->
+                <div class="bg-white rounded-xl p-3 border-2 custom-green-border">
+                    <div class="flex items-start justify-between mb-2">
+                        <div>
+                            <p class="text-md font-semibold text-gray-900">Jane Doe</p>
+                            <div class="flex items-center text-sm text-gray-500 mt-1">
+                                <span class="h-2 w-2 bg-blue-400 rounded-full mr-2"></span>
+                                Priority Service
+                            </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mb-3">
+                        <span class="inline-block custom-light-green-bg custom-green text-xs font-medium px-3 py-1 rounded">Tue, Oct 16 - 11:30 AM</span>
+                    </div>
+                    <div class="relative">
+                        <img src="https://placehold.co/400x200/e0e0e0/a0a0a0?text=Map+View" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x200/e2e8f0/4a5568?text=Map+Error';"
+                             alt="Map showing location for Jane Doe's booking" class="rounded-lg w-full h-32 object-cover">
+                        <div class="absolute bottom-2 right-2 custom-green-bg text-white text-xs font-semibold px-2 py-1 rounded shadow-md">
+                            01:30:00
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Card 3 -->
+                <div class="bg-white rounded-xl p-3 border-2 custom-green-border">
+                    <div class="flex items-start justify-between mb-2">
+                        <div>
+                            <p class="text-md font-semibold text-gray-900">John Smith</p>
+                            <div class="flex items-center text-sm text-gray-500 mt-1">
+                                <span class="h-2 w-2 bg-yellow-400 rounded-full mr-2"></span>
+                                Standard Service
+                            </div>
+                        </div>
+                        <button class="text-gray-400 hover:text-gray-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mb-3">
+                        <span class="inline-block custom-light-green-bg custom-green text-xs font-medium px-3 py-1 rounded">Wed, Oct 17 - 02:00 PM</span>
+                    </div>
+                    <div class="relative">
+                        <img src="https://placehold.co/400x200/e0e0e0/a0a0a0?text=Map+View" 
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x200/e2e8f0/4a5568?text=Map+Error';"
+                             alt="Map showing location for John Smith's booking" class="rounded-lg w-full h-32 object-cover">
+                        <div class="absolute bottom-2 right-2 custom-green-bg text-white text-xs font-semibold px-2 py-1 rounded shadow-md">
+                            03:00:00
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
