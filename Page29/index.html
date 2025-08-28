@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center font-sans">
+
+  <!-- MOBILE CONTAINER -->
+  <div class="w-[380px] bg-white min-h-screen shadow-lg relative flex flex-col">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-4 py-3 border-b">
+      <button class="text-gray-600">&larr;</button>
+      <h1 class="text-xl font-semibold text-green-600">GreenGenie</h1>
+      <button class="text-gray-600">&#9881;</button>
+    </div>
+
+    <!-- Page Title -->
+    <h2 class="text-lg font-bold px-4 mt-4">Notifications</h2>
+
+    <!-- Notification List -->
+    <div class="px-4 mt-4 space-y-4">
+      <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl shadow">
+        <div class="flex items-center space-x-3">
+          <span class="text-xl">🛒</span>
+          <div>
+            <p class="font-semibold">Order #5542 Placed</p>
+            <p class="text-xs text-gray-500">1m ago</p>
+          </div>
+        </div>
+        <span class="bg-green-600 text-white text-xs px-2 py-1 rounded-full">1</span>
+      </div>
+
+      <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl shadow">
+        <div class="flex items-center space-x-3">
+          <span class="text-xl">📦</span>
+          <div>
+            <p class="font-semibold">Order #5541 arriving today</p>
+            <p class="text-xs text-gray-500">30m ago</p>
+          </div>
+        </div>
+        <span class="bg-green-600 text-white text-xs px-2 py-1 rounded-full">1</span>
+      </div>
+
+      <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl shadow">
+        <div class="flex items-center space-x-3">
+          <span class="text-xl">✅</span>
+          <div>
+            <p class="font-semibold">Order #5540 received</p>
+            <p class="text-xs text-gray-500">10h ago</p>
+          </div>
+        </div>
+        <span class="bg-green-600 text-white text-xs px-2 py-1 rounded-full">1</span>
+      </div>
+
+      <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl shadow">
+        <div class="flex items-center space-x-3">
+          <span class="text-xl">🌿</span>
+          <div>
+            <p class="font-semibold">Monstera Adansonii looks healthy</p>
+            <p class="text-xs text-gray-500">Today</p>
+          </div>
+        </div>
+        <span class="bg-green-600 text-white text-xs px-2 py-1 rounded-full">2</span>
+      </div>
+
+      <div class="flex items-center justify-between p-3 bg-gray-50 rounded-xl shadow">
+        <div class="flex items-center space-x-3">
+          <span class="text-xl">💧</span>
+          <div>
+            <p class="font-semibold">Janda Bolong is thirsty</p>
+            <p class="text-xs text-gray-500">Today</p>
+          </div>
+        </div>
+        <span class="bg-green-600 text-white text-xs px-2 py-1 rounded-full">2</span>
+      </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="fixed bottom-0 w-[380px] bg-white border-t flex justify-around py-2">
+      <button class="text-gray-500">🏠</button>
+      <button class="text-gray-500">🛒</button>
+      <button class="text-green-600">⭐</button>
+      <button class="text-gray-500">🔔</button>
+      <button class="text-gray-500">👤</button>
+    </div>
+
+  </div>
+</body>
+</html>
